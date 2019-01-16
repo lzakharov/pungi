@@ -19,6 +19,8 @@ func IsValid(v interface{}) error {
 	return isValidValue(name, value, false)
 }
 
+// isValidValue returns true if the specified value is valid or optional.
+// If the value is a pointer or structure, then recursively checks nested values.
 func isValidValue(name string, value reflect.Value, nullable bool) error {
 	valid := true
 
@@ -57,6 +59,7 @@ func isValidValue(name string, value reflect.Value, nullable bool) error {
 	return nil
 }
 
+// isStructFieldNullable returns true if the structure field is nullable.
 func isStructFieldNullable(field reflect.StructField) bool {
 	value, ok := field.Tag.Lookup(pungi)
 	return ok && value == nullable
