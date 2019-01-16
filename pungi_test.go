@@ -63,7 +63,7 @@ func TestIsValid(t *testing.T) {
 				URL: "127.0.0.1:9050",
 			},
 		}
-		expected := "'Config.Token' has zero value"
+		expected := "'Config.Token' has a zero value"
 
 		err := IsValid(invalidConfig)
 		require.Error(t, err)

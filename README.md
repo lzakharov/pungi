@@ -46,7 +46,7 @@ func main() {
 
 
 	fmt.Println(pungi.IsValid(validConfig)) // nil
-	fmt.Println(pungi.IsValid(invalidConfig).Error()) // 'Config.Token' has zero value
+	fmt.Println(pungi.IsValid(invalidConfig).Error()) // 'Config.Token' has a zero value
 }
 ```
 

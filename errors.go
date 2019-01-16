@@ -2,9 +2,9 @@ package pungi
 
 import "fmt"
 
-const errInvalidFormat = "'%s' has zero value"
+const errInvalidFormat = "'%s' has a zero value"
 
-// ErrInvalid indicates zero value in object.
+// ErrInvalid indicates a zero value in an object.
 type ErrInvalid struct {
 	Name string
 }
